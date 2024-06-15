@@ -1,0 +1,2333 @@
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim work.TB_Top -voptargs="+acc=npr" -l transcript_vsim "+UVM_TESTNAME=my_test" -do "run -all; coverage report -detail;" 
+# Start time: 07:32:36 on Jun 12,2024
+# Loading C:/Users/IBRAHI~1/AppData/Local/Temp\Ibrahim Mostafa@DESKTOP-R59G83U_dpi_4620\win64_gcc-13.2.0\export_tramp.dll
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Warning: Unidentified argument mtiAvm, Skipping further processing.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=24.
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading sv_std.std
+# Loading work.intf(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.pack1(fast)
+# Loading work.TB_Top(fast)
+# Loading work.intf(fast__2)
+# Loading work.rle(fast)
+# Loading work.flopr(fast)
+# Loading work.equal(fast)
+# Loading work.mux2(fast)
+# Loading work.flopr(fast__1)
+# Loading work.flopenr(fast)
+# Loading work.mux2(fast__1)
+# Loading work.flopenr(fast__1)
+# ** Warning: (vsim-8441) Clocking block output local_intf.cb.Input is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /pack1 File: S:/GP_UVM/RLE/pack1/Monitor.sv Line: 64
+# ** Warning: (vsim-8441) Clocking block output local_intf.cb.rand_in_count is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /pack1 File: S:/GP_UVM/RLE/pack1/Monitor.sv Line: 65
+# Compiling C:/Users/IBRAHI~1/AppData/Local/Temp\Ibrahim Mostafa@DESKTOP-R59G83U_dpi_4620\win64_gcc-13.2.0\exportwrapper.c
+# Loading C:/Users/IBRAHI~1/AppData/Local/Temp\Ibrahim Mostafa@DESKTOP-R59G83U_dpi_4620\win64_gcc-13.2.0\vsim_auto_compile.dll
+# run -all
+# UVM_INFO S:/GP_UVM/RLE/uvm-1.2/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO S:/GP_UVM/RLE/uvm-1.2/uvm-1.2/src/base/uvm_root.svh(453) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+# UVM_INFO @ 0: reporter [RNTST] Running test my_test...
+# UVM_INFO S:/GP_UVM/RLE/pack1/Test.sv(26) @ 0: uvm_test_top [my_test] Build Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Env.sv(21) @ 0: uvm_test_top.env [my_env] Build Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Agent.sv(21) @ 0: uvm_test_top.env.agent [my_agent] Build Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Driver.sv(23) @ 0: uvm_test_top.env.agent.driver [my_driver] Build Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Monitor.sv(29) @ 0: uvm_test_top.env.agent.monitor [my_monitor] Build Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Scoreboard.sv(23) @ 0: uvm_test_top.env.scoreboard [my_scoreboard] Build Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Subscriber.sv(40) @ 0: uvm_test_top.env.subscriber [my_subscirber] Build Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Sequencer.sv(23) @ 0: sequencer [my_sequencer] Connect Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Driver.sv(36) @ 0: uvm_test_top.env.agent.driver [my_driver] Connect Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Monitor.sv(45) @ 0: uvm_test_top.env.agent.monitor [my_monitor] Connect Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Agent.sv(33) @ 0: uvm_test_top.env.agent [my_agent] Connect Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Scoreboard.sv(33) @ 0: uvm_test_top.env.scoreboard [my_scoreboard] Connect Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Subscriber.sv(49) @ 0: uvm_test_top.env.subscriber [my_subscirber] Connect Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Env.sv(32) @ 0: uvm_test_top.env [my_env] Connect Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Test.sv(44) @ 0: uvm_test_top [my_test] Connect Phase
+# UVM_INFO S:/GP_UVM/RLE/uvm-1.2/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+# UVM_INFO S:/GP_UVM/RLE/pack1/Test.sv(51) @ 0: uvm_test_top [my_test] Run Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Env.sv(43) @ 0: uvm_test_top.env [my_env] Run Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Subscriber.sv(56) @ 0: uvm_test_top.env.subscriber [my_subscirber] Run Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Scoreboard.sv(40) @ 0: uvm_test_top.env.scoreboard [my_scoreboard] Run Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Agent.sv(43) @ 0: uvm_test_top.env.agent [my_agent] Run Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Monitor.sv(52) @ 0: uvm_test_top.env.agent.monitor [my_monitor] Run Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Driver.sv(43) @ 0: uvm_test_top.env.agent.driver [my_driver] Run Phase
+# UVM_INFO S:/GP_UVM/RLE/pack1/Sequencer.sv(30) @ 0: sequencer [my_sequencer] Run Phase
+# ********************** Driver ****************************
+# Time: 0      driver.rst_n = 0, driver.Input = 215, driver.rand_in_count = 3
+# Time: 0      Generate Reset item:    rst_n = 0, Input = 215
+# ********************** Driver ****************************
+# Time: 20      driver.rst_n = 1, driver.Input = -158, driver.rand_in_count = 2
+# Time: 20   Generate Directed Test item:   Input = -158, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 40      driver.rst_n = 1, driver.Input = -158, driver.rand_in_count = 2
+# Time: 40   Generate Directed Test item:   Input = -158, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 60      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 60   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 80      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Final Coverage --------------------> 35.00%
+# Time: 80 Monitor.Input = 215, Monitor.rand_in_count = 3, Monitor.Output = -158, Monitor.Counter = 2
+# Time: 80   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 80   SB.rst_n = 1,SB.Input = 215, SB.rand_in_count = 3, SB.Output = -158, SB.Counter = 2
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 80: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = -158 and the actual Counter= 2  |||||  expected Output = 215 and expected Counter = 3  
+# ********************** Driver ****************************
+# Time: 100      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 100   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 120      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 1
+# Time: 120   Generate Directed Test item:   Input = 128, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 140      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 140   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 160      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Final Coverage --------------------> 45.00%
+# Time: 160 Monitor.Input = 0, Monitor.rand_in_count = 3, Monitor.Output = 0, Monitor.Counter = 3
+# Time: 160   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 160   SB.rst_n = 1,SB.Input = 0, SB.rand_in_count = 3, SB.Output = 0, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 180      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 180   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 200      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Time: 200   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 220      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Time: 220   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 240      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Final Coverage --------------------> 55.00%
+# Time: 240 Monitor.Input = 128, Monitor.rand_in_count = 3, Monitor.Output = 128, Monitor.Counter = 4
+# Time: 240   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 240   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 3, SB.Output = 128, SB.Counter = 4
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 240: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = 128 and the actual Counter= 4  |||||  expected Output = 128 and expected Counter = 3  
+# ********************** Driver ****************************
+# Time: 260      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Time: 260   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 280      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 1
+# Time: 280   Generate Directed Test item:   Input = 128, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 300      driver.rst_n = 1, driver.Input = 59, driver.rand_in_count = 1
+# Time: 300   Generate Directed Test item:   Input = 59, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 320      driver.rst_n = 1, driver.Input = -29, driver.rand_in_count = 2
+# Time: 320   Generate Directed Test item:   Input = -29, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 340      driver.rst_n = 1, driver.Input = -29, driver.rand_in_count = 2
+# Final Coverage --------------------> 65.00%
+# Time: 340 Monitor.Input = 127, Monitor.rand_in_count = 4, Monitor.Output = 59, Monitor.Counter = 1
+# Time: 340   Generate Directed Test item:   Input = -29, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 340   SB.rst_n = 1,SB.Input = 127, SB.rand_in_count = 4, SB.Output = 59, SB.Counter = 1
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 340: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = 59 and the actual Counter= 1  |||||  expected Output = 127 and expected Counter = 4  
+# ********************** Driver ****************************
+# Time: 360      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 360   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 380      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 380   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 400      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 400   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 420      driver.rst_n = 1, driver.Input = 30, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 420 Monitor.Input = -29, Monitor.rand_in_count = 2, Monitor.Output = -29, Monitor.Counter = 2
+# Time: 420   Generate Directed Test item:   Input = 30, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 420   SB.rst_n = 1,SB.Input = -29, SB.rand_in_count = 2, SB.Output = -29, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 440      driver.rst_n = 1, driver.Input = 30, driver.rand_in_count = 2
+# Time: 440   Generate Directed Test item:   Input = 30, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 460      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 1
+# Time: 460   Generate Directed Test item:   Input = 0, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 480      driver.rst_n = 1, driver.Input = 99, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 480 Monitor.Input = 30, Monitor.rand_in_count = 2, Monitor.Output = 30, Monitor.Counter = 2
+# Time: 480   Generate Directed Test item:   Input = 99, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 480   SB.rst_n = 1,SB.Input = 30, SB.rand_in_count = 2, SB.Output = 30, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 500      driver.rst_n = 1, driver.Input = 99, driver.rand_in_count = 2
+# Time: 500   Generate Directed Test item:   Input = 99, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 520      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 4
+# Time: 520   Generate Directed Test item:   Input = 128, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 540      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 540 Monitor.Input = 99, Monitor.rand_in_count = 2, Monitor.Output = 99, Monitor.Counter = 2
+# Time: 540   Generate Directed Test item:   Input = 128, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 540   SB.rst_n = 1,SB.Input = 99, SB.rand_in_count = 2, SB.Output = 99, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 560      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 4
+# Time: 560   Generate Directed Test item:   Input = 128, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 580      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 4
+# Time: 580   Generate Directed Test item:   Input = 128, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 600      driver.rst_n = 1, driver.Input = -35, driver.rand_in_count = 4
+# Time: 600   Generate Directed Test item:   Input = -35, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 620      driver.rst_n = 1, driver.Input = -35, driver.rand_in_count = 4
+# Time: 620   Generate Directed Test item:   Input = -35, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 640      driver.rst_n = 1, driver.Input = -35, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 640 Monitor.Input = 128, Monitor.rand_in_count = 4, Monitor.Output = 128, Monitor.Counter = 4
+# Time: 640   Generate Directed Test item:   Input = -35, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 640   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 4, SB.Output = 128, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 660      driver.rst_n = 1, driver.Input = -35, driver.rand_in_count = 4
+# Time: 660   Generate Directed Test item:   Input = -35, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 680      driver.rst_n = 1, driver.Input = -25, driver.rand_in_count = 1
+# Time: 680   Generate Directed Test item:   Input = -25, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 700      driver.rst_n = 1, driver.Input = -192, driver.rand_in_count = 3
+# Time: 700   Generate Directed Test item:   Input = -192, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 720      driver.rst_n = 1, driver.Input = -192, driver.rand_in_count = 3
+# Time: 720   Generate Directed Test item:   Input = -192, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 740      driver.rst_n = 1, driver.Input = -192, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 740 Monitor.Input = -35, Monitor.rand_in_count = 4, Monitor.Output = -25, Monitor.Counter = 1
+# Time: 740   Generate Directed Test item:   Input = -192, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 740   SB.rst_n = 1,SB.Input = -35, SB.rand_in_count = 4, SB.Output = -25, SB.Counter = 1
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 740: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = -25 and the actual Counter= 1  |||||  expected Output = -35 and expected Counter = 4  
+# ********************** Driver ****************************
+# Time: 760      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 760   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 780      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 780   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 800      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 800   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 820      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 820 Monitor.Input = -192, Monitor.rand_in_count = 3, Monitor.Output = -192, Monitor.Counter = 3
+# Time: 820   Generate Directed Test item:   Input = 0, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 820   SB.rst_n = 1,SB.Input = -192, SB.rand_in_count = 3, SB.Output = -192, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 840      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 840   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 860      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 860   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 880      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 880   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 900      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 900 Monitor.Input = 0, Monitor.rand_in_count = 1, Monitor.Output = 0, Monitor.Counter = 1
+# Time: 900   Generate Directed Test item:   Input = 127, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 900   SB.rst_n = 1,SB.Input = 0, SB.rand_in_count = 1, SB.Output = 0, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 920      driver.rst_n = 1, driver.Input = 130, driver.rand_in_count = 1
+# Time: 920   Generate Directed Test item:   Input = 130, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 940      driver.rst_n = 1, driver.Input = -97, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 940 Monitor.Input = 127, Monitor.rand_in_count = 1, Monitor.Output = 127, Monitor.Counter = 4
+# Time: 940   Generate Directed Test item:   Input = -97, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 940   SB.rst_n = 1,SB.Input = 127, SB.rand_in_count = 1, SB.Output = 127, SB.Counter = 4
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 940: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = 127 and the actual Counter= 4  |||||  expected Output = 127 and expected Counter = 1  
+# ********************** Driver ****************************
+# Time: 960      driver.rst_n = 1, driver.Input = -97, driver.rand_in_count = 3
+# Time: 960   Generate Directed Test item:   Input = -97, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 980      driver.rst_n = 1, driver.Input = -97, driver.rand_in_count = 3
+# Time: 980   Generate Directed Test item:   Input = -97, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1000      driver.rst_n = 1, driver.Input = -180, driver.rand_in_count = 4
+# Time: 1000   Generate Directed Test item:   Input = -180, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 1020      driver.rst_n = 1, driver.Input = -180, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 1020 Monitor.Input = -97, Monitor.rand_in_count = 3, Monitor.Output = -97, Monitor.Counter = 3
+# Time: 1020   Generate Directed Test item:   Input = -180, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1020   SB.rst_n = 1,SB.Input = -97, SB.rand_in_count = 3, SB.Output = -97, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 1040      driver.rst_n = 1, driver.Input = -180, driver.rand_in_count = 4
+# Time: 1040   Generate Directed Test item:   Input = -180, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 1060      driver.rst_n = 1, driver.Input = -180, driver.rand_in_count = 4
+# Time: 1060   Generate Directed Test item:   Input = -180, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 1080      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 2
+# Time: 1080   Generate Directed Test item:   Input = 0, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 1100      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 2
+# Time: 1100   Generate Directed Test item:   Input = 0, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 1120      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 1120 Monitor.Input = -180, Monitor.rand_in_count = 4, Monitor.Output = -180, Monitor.Counter = 4
+# Time: 1120   Generate Directed Test item:   Input = 127, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1120   SB.rst_n = 1,SB.Input = -180, SB.rand_in_count = 4, SB.Output = -180, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 1140      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 2
+# Time: 1140   Generate Directed Test item:   Input = 127, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 1160      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 1160   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1180      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 1180 Monitor.Input = 127, Monitor.rand_in_count = 2, Monitor.Output = 127, Monitor.Counter = 2
+# Time: 1180   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1180   SB.rst_n = 1,SB.Input = 127, SB.rand_in_count = 2, SB.Output = 127, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 1200      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 1200   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1220      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 2
+# Time: 1220   Generate Directed Test item:   Input = 128, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 1240      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 2
+# Time: 1240   Generate Directed Test item:   Input = 128, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 1260      driver.rst_n = 1, driver.Input = -52, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 1260 Monitor.Input = 0, Monitor.rand_in_count = 3, Monitor.Output = 0, Monitor.Counter = 3
+# Time: 1260   Generate Directed Test item:   Input = -52, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1260   SB.rst_n = 1,SB.Input = 0, SB.rand_in_count = 3, SB.Output = 0, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 1280      driver.rst_n = 1, driver.Input = -52, driver.rand_in_count = 2
+# Time: 1280   Generate Directed Test item:   Input = -52, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 1300      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 1300   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1320      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 1320 Monitor.Input = -52, Monitor.rand_in_count = 2, Monitor.Output = -52, Monitor.Counter = 2
+# Time: 1320   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1320   SB.rst_n = 1,SB.Input = -52, SB.rand_in_count = 2, SB.Output = -52, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 1340      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 1340   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1360      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 2
+# Time: 1360   Generate Directed Test item:   Input = 127, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 1380      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 2
+# Time: 1380   Generate Directed Test item:   Input = 127, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 1400      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 1400 Monitor.Input = 128, Monitor.rand_in_count = 3, Monitor.Output = 128, Monitor.Counter = 3
+# Time: 1400   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1400   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 3, SB.Output = 128, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 1420      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 1420   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1440      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 1440   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1460      driver.rst_n = 1, driver.Input = -106, driver.rand_in_count = 4
+# Time: 1460   Generate Directed Test item:   Input = -106, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 1480      driver.rst_n = 1, driver.Input = -106, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 1480 Monitor.Input = 127, Monitor.rand_in_count = 3, Monitor.Output = 127, Monitor.Counter = 5
+# Time: 1480   Generate Directed Test item:   Input = -106, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1480   SB.rst_n = 1,SB.Input = 127, SB.rand_in_count = 3, SB.Output = 127, SB.Counter = 5
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 1480: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = 127 and the actual Counter= 5  |||||  expected Output = 127 and expected Counter = 3  
+# ********************** Driver ****************************
+# Time: 1500      driver.rst_n = 1, driver.Input = -106, driver.rand_in_count = 4
+# Time: 1500   Generate Directed Test item:   Input = -106, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 1520      driver.rst_n = 1, driver.Input = -106, driver.rand_in_count = 4
+# Time: 1520   Generate Directed Test item:   Input = -106, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 1540      driver.rst_n = 1, driver.Input = -34, driver.rand_in_count = 1
+# Time: 1540   Generate Directed Test item:   Input = -34, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 1560      driver.rst_n = 1, driver.Input = -154, driver.rand_in_count = 2
+# Time: 1560   Generate Directed Test item:   Input = -154, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 1580      driver.rst_n = 1, driver.Input = -154, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 1580 Monitor.Input = -106, Monitor.rand_in_count = 4, Monitor.Output = -34, Monitor.Counter = 1
+# Time: 1580   Generate Directed Test item:   Input = -154, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1580   SB.rst_n = 1,SB.Input = -106, SB.rand_in_count = 4, SB.Output = -34, SB.Counter = 1
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 1580: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = -34 and the actual Counter= 1  |||||  expected Output = -106 and expected Counter = 4  
+# ********************** Driver ****************************
+# Time: 1600      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 1
+# Time: 1600   Generate Directed Test item:   Input = 128, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 1620      driver.rst_n = 1, driver.Input = -136, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 1620 Monitor.Input = -154, Monitor.rand_in_count = 2, Monitor.Output = -154, Monitor.Counter = 2
+# Time: 1620   Generate Directed Test item:   Input = -136, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1620   SB.rst_n = 1,SB.Input = -154, SB.rand_in_count = 2, SB.Output = -154, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 1640      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 1640   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1660      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 1660   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1680      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 1680   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1700      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 1700 Monitor.Input = -136, Monitor.rand_in_count = 1, Monitor.Output = -136, Monitor.Counter = 1
+# Time: 1700   Generate Directed Test item:   Input = 128, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1700   SB.rst_n = 1,SB.Input = -136, SB.rand_in_count = 1, SB.Output = -136, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 1720      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 2
+# Time: 1720   Generate Directed Test item:   Input = 128, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 1740      driver.rst_n = 1, driver.Input = 65, driver.rand_in_count = 3
+# Time: 1740   Generate Directed Test item:   Input = 65, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1760      driver.rst_n = 1, driver.Input = 65, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 1760 Monitor.Input = 128, Monitor.rand_in_count = 2, Monitor.Output = 128, Monitor.Counter = 2
+# Time: 1760   Generate Directed Test item:   Input = 65, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1760   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 2, SB.Output = 128, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 1780      driver.rst_n = 1, driver.Input = 65, driver.rand_in_count = 3
+# Time: 1780   Generate Directed Test item:   Input = 65, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1800      driver.rst_n = 1, driver.Input = -27, driver.rand_in_count = 1
+# Time: 1800   Generate Directed Test item:   Input = -27, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 1820      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 2
+# Time: 1820   Generate Directed Test item:   Input = 0, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 1840      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 1840 Monitor.Input = 65, Monitor.rand_in_count = 3, Monitor.Output = -27, Monitor.Counter = 1
+# Time: 1840   Generate Directed Test item:   Input = 0, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1840   SB.rst_n = 1,SB.Input = 65, SB.rand_in_count = 3, SB.Output = -27, SB.Counter = 1
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 1840: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = -27 and the actual Counter= 1  |||||  expected Output = 65 and expected Counter = 3  
+# ********************** Driver ****************************
+# Time: 1860      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 1860   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1880      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 1880   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1900      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 1900   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1920      driver.rst_n = 1, driver.Input = -113, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 1920 Monitor.Input = 0, Monitor.rand_in_count = 2, Monitor.Output = 0, Monitor.Counter = 2
+# Time: 1920   Generate Directed Test item:   Input = -113, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 1920   SB.rst_n = 1,SB.Input = 0, SB.rand_in_count = 2, SB.Output = 0, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 1940      driver.rst_n = 1, driver.Input = -113, driver.rand_in_count = 3
+# Time: 1940   Generate Directed Test item:   Input = -113, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1960      driver.rst_n = 1, driver.Input = -113, driver.rand_in_count = 3
+# Time: 1960   Generate Directed Test item:   Input = -113, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 1980      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 2
+# Time: 1980   Generate Directed Test item:   Input = 127, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 2000      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 2000 Monitor.Input = -113, Monitor.rand_in_count = 3, Monitor.Output = -113, Monitor.Counter = 3
+# Time: 2000   Generate Directed Test item:   Input = 127, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2000   SB.rst_n = 1,SB.Input = -113, SB.rand_in_count = 3, SB.Output = -113, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2020      driver.rst_n = 1, driver.Input = 240, driver.rand_in_count = 1
+# Time: 2020   Generate Directed Test item:   Input = 240, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 2040      driver.rst_n = 1, driver.Input = 65, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 2040 Monitor.Input = 127, Monitor.rand_in_count = 2, Monitor.Output = 127, Monitor.Counter = 2
+# Time: 2040   Generate Directed Test item:   Input = 65, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2040   SB.rst_n = 1,SB.Input = 127, SB.rand_in_count = 2, SB.Output = 127, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2060      driver.rst_n = 1, driver.Input = 65, driver.rand_in_count = 3
+# Time: 2060   Generate Directed Test item:   Input = 65, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2080      driver.rst_n = 1, driver.Input = 65, driver.rand_in_count = 3
+# Time: 2080   Generate Directed Test item:   Input = 65, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2100      driver.rst_n = 1, driver.Input = -203, driver.rand_in_count = 3
+# Time: 2100   Generate Directed Test item:   Input = -203, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2120      driver.rst_n = 1, driver.Input = -203, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 2120 Monitor.Input = 65, Monitor.rand_in_count = 3, Monitor.Output = 65, Monitor.Counter = 3
+# Time: 2120   Generate Directed Test item:   Input = -203, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2120   SB.rst_n = 1,SB.Input = 65, SB.rand_in_count = 3, SB.Output = 65, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2140      driver.rst_n = 1, driver.Input = -203, driver.rand_in_count = 3
+# Time: 2140   Generate Directed Test item:   Input = -203, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2160      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 2160   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2180      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 2180   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2200      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 2200 Monitor.Input = -203, Monitor.rand_in_count = 3, Monitor.Output = -203, Monitor.Counter = 3
+# Time: 2200   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2200   SB.rst_n = 1,SB.Input = -203, SB.rand_in_count = 3, SB.Output = -203, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2220      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 2220   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2240      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 2240   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2260      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 3
+# Time: 2260   Generate Directed Test item:   Input = 127, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2280      driver.rst_n = 1, driver.Input = -28, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 2280 Monitor.Input = 128, Monitor.rand_in_count = 3, Monitor.Output = 128, Monitor.Counter = 3
+# Time: 2280   Generate Directed Test item:   Input = -28, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2280   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 3, SB.Output = 128, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2300      driver.rst_n = 1, driver.Input = 7, driver.rand_in_count = 3
+# Time: 2300   Generate Directed Test item:   Input = 7, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2320      driver.rst_n = 1, driver.Input = 7, driver.rand_in_count = 3
+# Time: 2320   Generate Directed Test item:   Input = 7, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2340      driver.rst_n = 1, driver.Input = 7, driver.rand_in_count = 3
+# Time: 2340   Generate Directed Test item:   Input = 7, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2360      driver.rst_n = 1, driver.Input = 195, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 2360 Monitor.Input = -28, Monitor.rand_in_count = 1, Monitor.Output = -28, Monitor.Counter = 1
+# Time: 2360   Generate Directed Test item:   Input = 195, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2360   SB.rst_n = 1,SB.Input = -28, SB.rand_in_count = 1, SB.Output = -28, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2380      driver.rst_n = 1, driver.Input = 195, driver.rand_in_count = 2
+# Time: 2380   Generate Directed Test item:   Input = 195, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 2400      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Time: 2400   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 2420      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 2420 Monitor.Input = 195, Monitor.rand_in_count = 2, Monitor.Output = 195, Monitor.Counter = 2
+# Time: 2420   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2420   SB.rst_n = 1,SB.Input = 195, SB.rand_in_count = 2, SB.Output = 195, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2440      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Time: 2440   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 2460      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Time: 2460   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 2480      driver.rst_n = 1, driver.Input = 235, driver.rand_in_count = 3
+# Time: 2480   Generate Directed Test item:   Input = 235, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2500      driver.rst_n = 1, driver.Input = 235, driver.rand_in_count = 3
+# Time: 2500   Generate Directed Test item:   Input = 235, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2520      driver.rst_n = 1, driver.Input = 235, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 2520 Monitor.Input = 127, Monitor.rand_in_count = 4, Monitor.Output = 127, Monitor.Counter = 4
+# Time: 2520   Generate Directed Test item:   Input = 235, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2520   SB.rst_n = 1,SB.Input = 127, SB.rand_in_count = 4, SB.Output = 127, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2540      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 2540   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2560      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 2560   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2580      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 2580   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2600      driver.rst_n = 1, driver.Input = -2, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 2600 Monitor.Input = 235, Monitor.rand_in_count = 3, Monitor.Output = 235, Monitor.Counter = 3
+# Time: 2600   Generate Directed Test item:   Input = -2, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2600   SB.rst_n = 1,SB.Input = 235, SB.rand_in_count = 3, SB.Output = 235, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2620      driver.rst_n = 1, driver.Input = -2, driver.rand_in_count = 2
+# Time: 2620   Generate Directed Test item:   Input = -2, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 2640      driver.rst_n = 1, driver.Input = -13, driver.rand_in_count = 2
+# Time: 2640   Generate Directed Test item:   Input = -13, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 2660      driver.rst_n = 1, driver.Input = -13, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 2660 Monitor.Input = -2, Monitor.rand_in_count = 2, Monitor.Output = -2, Monitor.Counter = 2
+# Time: 2660   Generate Directed Test item:   Input = -13, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2660   SB.rst_n = 1,SB.Input = -2, SB.rand_in_count = 2, SB.Output = -2, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2680      driver.rst_n = 1, driver.Input = -103, driver.rand_in_count = 2
+# Time: 2680   Generate Directed Test item:   Input = -103, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 2700      driver.rst_n = 1, driver.Input = -103, driver.rand_in_count = 2
+# Time: 2700   Generate Directed Test item:   Input = -103, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 2720      driver.rst_n = 1, driver.Input = 77, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 2720 Monitor.Input = -13, Monitor.rand_in_count = 2, Monitor.Output = -13, Monitor.Counter = 2
+# Time: 2720   Generate Directed Test item:   Input = 77, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2720   SB.rst_n = 1,SB.Input = -13, SB.rand_in_count = 2, SB.Output = -13, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2740      driver.rst_n = 1, driver.Input = -3, driver.rand_in_count = 1
+# Time: 2740   Generate Directed Test item:   Input = -3, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 2760      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 2760 Monitor.Input = 77, Monitor.rand_in_count = 1, Monitor.Output = 77, Monitor.Counter = 1
+# Time: 2760   Generate Directed Test item:   Input = 0, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2760   SB.rst_n = 1,SB.Input = 77, SB.rand_in_count = 1, SB.Output = 77, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 2780      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 2780   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2800      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 2800   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2820      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 2820   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2840      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 2840 Monitor.Input = 0, Monitor.rand_in_count = 1, Monitor.Output = -3, Monitor.Counter = 1
+# Time: 2840   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2840   SB.rst_n = 1,SB.Input = 0, SB.rand_in_count = 1, SB.Output = -3, SB.Counter = 1
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 2840: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = -3 and the actual Counter= 1  |||||  expected Output = 0 and expected Counter = 1  
+# ********************** Driver ****************************
+# Time: 2860      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 2860   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2880      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 2880   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 2900      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 1
+# Time: 2900   Generate Directed Test item:   Input = 128, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 2920      driver.rst_n = 1, driver.Input = 168, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 2920 Monitor.Input = 128, Monitor.rand_in_count = 3, Monitor.Output = 0, Monitor.Counter = 4
+# Time: 2920   Generate Directed Test item:   Input = 168, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2920   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 3, SB.Output = 0, SB.Counter = 4
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 2920: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = 0 and the actual Counter= 4  |||||  expected Output = 128 and expected Counter = 3  
+# ********************** Driver ****************************
+# Time: 2940      driver.rst_n = 1, driver.Input = -240, driver.rand_in_count = 2
+# Time: 2940   Generate Directed Test item:   Input = -240, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 2960      driver.rst_n = 1, driver.Input = -240, driver.rand_in_count = 2
+# Time: 2960   Generate Directed Test item:   Input = -240, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 2980      driver.rst_n = 1, driver.Input = -165, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 2980 Monitor.Input = 168, Monitor.rand_in_count = 1, Monitor.Output = 168, Monitor.Counter = 1
+# Time: 2980   Generate Directed Test item:   Input = -165, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 2980   SB.rst_n = 1,SB.Input = 168, SB.rand_in_count = 1, SB.Output = 168, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 3000      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 3000   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3020      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 3020   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3040      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 3040   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3060      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 3060 Monitor.Input = -165, Monitor.rand_in_count = 1, Monitor.Output = -165, Monitor.Counter = 1
+# Time: 3060   Generate Directed Test item:   Input = 128, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3060   SB.rst_n = 1,SB.Input = -165, SB.rand_in_count = 1, SB.Output = -165, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 3080      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 3080   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3100      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 3100   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3120      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 3120   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3140      driver.rst_n = 1, driver.Input = 157, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 3140 Monitor.Input = 128, Monitor.rand_in_count = 1, Monitor.Output = -165, Monitor.Counter = 1
+# Time: 3140   Generate Directed Test item:   Input = 157, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3140   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 1, SB.Output = -165, SB.Counter = 1
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 3140: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = -165 and the actual Counter= 1  |||||  expected Output = 128 and expected Counter = 1  
+# ********************** Driver ****************************
+# Time: 3160      driver.rst_n = 1, driver.Input = 157, driver.rand_in_count = 4
+# Time: 3160   Generate Directed Test item:   Input = 157, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3180      driver.rst_n = 1, driver.Input = 157, driver.rand_in_count = 4
+# Time: 3180   Generate Directed Test item:   Input = 157, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3200      driver.rst_n = 1, driver.Input = 157, driver.rand_in_count = 4
+# Time: 3200   Generate Directed Test item:   Input = 157, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3220      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Time: 3220   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3240      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 3240 Monitor.Input = 157, Monitor.rand_in_count = 4, Monitor.Output = 157, Monitor.Counter = 4
+# Time: 3240   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3240   SB.rst_n = 1,SB.Input = 157, SB.rand_in_count = 4, SB.Output = 157, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 3260      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Time: 3260   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3280      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 4
+# Time: 3280   Generate Directed Test item:   Input = 127, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3300      driver.rst_n = 1, driver.Input = -117, driver.rand_in_count = 2
+# Time: 3300   Generate Directed Test item:   Input = -117, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 3320      driver.rst_n = 1, driver.Input = -117, driver.rand_in_count = 2
+# Time: 3320   Generate Directed Test item:   Input = -117, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 3340      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 3340 Monitor.Input = 127, Monitor.rand_in_count = 4, Monitor.Output = 127, Monitor.Counter = 4
+# Time: 3340   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3340   SB.rst_n = 1,SB.Input = 127, SB.rand_in_count = 4, SB.Output = 127, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 3360      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 3360   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3380      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 3380   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3400      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 2
+# Time: 3400   Generate Directed Test item:   Input = 0, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 3420      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 3420 Monitor.Input = 128, Monitor.rand_in_count = 3, Monitor.Output = 128, Monitor.Counter = 3
+# Time: 3420   Generate Directed Test item:   Input = 0, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3420   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 3, SB.Output = 128, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 3440      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 1
+# Time: 3440   Generate Directed Test item:   Input = 127, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 3460      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 3460 Monitor.Input = 0, Monitor.rand_in_count = 2, Monitor.Output = 0, Monitor.Counter = 2
+# Time: 3460   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3460   SB.rst_n = 1,SB.Input = 0, SB.rand_in_count = 2, SB.Output = 0, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 3480      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 3480   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3500      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 3500   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3520      driver.rst_n = 1, driver.Input = -241, driver.rand_in_count = 1
+# Time: 3520   Generate Directed Test item:   Input = -241, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 3540      driver.rst_n = 1, driver.Input = 127, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 3540 Monitor.Input = 0, Monitor.rand_in_count = 3, Monitor.Output = 0, Monitor.Counter = 3
+# Time: 3540   Generate Directed Test item:   Input = 127, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3540   SB.rst_n = 1,SB.Input = 0, SB.rand_in_count = 3, SB.Output = 0, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 3560      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 3560   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3580      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 3580   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3600      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 3600   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3620      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 3620 Monitor.Input = 127, Monitor.rand_in_count = 1, Monitor.Output = 127, Monitor.Counter = 1
+# Time: 3620   Generate Directed Test item:   Input = 128, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3620   SB.rst_n = 1,SB.Input = 127, SB.rand_in_count = 1, SB.Output = 127, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 3640      driver.rst_n = 1, driver.Input = 114, driver.rand_in_count = 1
+# Time: 3640   Generate Directed Test item:   Input = 114, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 3660      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 3660 Monitor.Input = 128, Monitor.rand_in_count = 1, Monitor.Output = 128, Monitor.Counter = 1
+# Time: 3660   Generate Directed Test item:   Input = 128, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3660   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 1, SB.Output = 128, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 3680      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 3680   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3700      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 3700   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3720      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 3720   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 3740      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 3740 Monitor.Input = 128, Monitor.rand_in_count = 1, Monitor.Output = 128, Monitor.Counter = 1
+# Time: 3740   Generate Directed Test item:   Input = 0, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3740   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 1, SB.Output = 128, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 3760      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Time: 3760   Generate Directed Test item:   Input = 0, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3780      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Time: 3780   Generate Directed Test item:   Input = 0, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3800      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Time: 3800   Generate Directed Test item:   Input = 0, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3820      driver.rst_n = 1, driver.Input = -44, driver.rand_in_count = 1
+# Time: 3820   Generate Directed Test item:   Input = -44, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 3840      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 3840 Monitor.Input = 0, Monitor.rand_in_count = 4, Monitor.Output = 0, Monitor.Counter = 7
+# Time: 3840   Generate Directed Test item:   Input = 128, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3840   SB.rst_n = 1,SB.Input = 0, SB.rand_in_count = 4, SB.Output = 0, SB.Counter = 7
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 3840: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = 0 and the actual Counter= 7  |||||  expected Output = 0 and expected Counter = 4  
+# ********************** Driver ****************************
+# Time: 3860      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 2
+# Time: 3860   Generate Directed Test item:   Input = 128, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 3880      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Time: 3880   Generate Directed Test item:   Input = 0, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3900      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 3900 Monitor.Input = 128, Monitor.rand_in_count = 2, Monitor.Output = 128, Monitor.Counter = 2
+# Time: 3900   Generate Directed Test item:   Input = 0, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 3900   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 2, SB.Output = 128, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 3920      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Time: 3920   Generate Directed Test item:   Input = 0, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3940      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Time: 3940   Generate Directed Test item:   Input = 0, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 3960      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 1
+# Time: 3960   Generate Directed Test item:   Input = 128, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 3980      driver.rst_n = 1, driver.Input = 9, driver.rand_in_count = 1
+# Time: 3980   Generate Directed Test item:   Input = 9, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 4000      driver.rst_n = 1, driver.Input = -243, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 4000 Monitor.Input = 0, Monitor.rand_in_count = 4, Monitor.Output = 128, Monitor.Counter = 1
+# Time: 4000   Generate Directed Test item:   Input = -243, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4000   SB.rst_n = 1,SB.Input = 0, SB.rand_in_count = 4, SB.Output = 128, SB.Counter = 1
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 4000: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = 128 and the actual Counter= 1  |||||  expected Output = 0 and expected Counter = 4  
+# ********************** Driver ****************************
+# Time: 4020      driver.rst_n = 1, driver.Input = -243, driver.rand_in_count = 4
+# Time: 4020   Generate Directed Test item:   Input = -243, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4040      driver.rst_n = 1, driver.Input = -243, driver.rand_in_count = 4
+# Time: 4040   Generate Directed Test item:   Input = -243, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4060      driver.rst_n = 1, driver.Input = -243, driver.rand_in_count = 4
+# Time: 4060   Generate Directed Test item:   Input = -243, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4080      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 1
+# Time: 4080   Generate Directed Test item:   Input = 128, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 4100      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 4100 Monitor.Input = -243, Monitor.rand_in_count = 4, Monitor.Output = -243, Monitor.Counter = 4
+# Time: 4100   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4100   SB.rst_n = 1,SB.Input = -243, SB.rand_in_count = 4, SB.Output = -243, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 4120      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 4120   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 4140      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 3
+# Time: 4140   Generate Directed Test item:   Input = 0, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 4160      driver.rst_n = 1, driver.Input = 198, driver.rand_in_count = 4
+# Time: 4160   Generate Directed Test item:   Input = 198, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4180      driver.rst_n = 1, driver.Input = 198, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 4180 Monitor.Input = 0, Monitor.rand_in_count = 3, Monitor.Output = 0, Monitor.Counter = 3
+# Time: 4180   Generate Directed Test item:   Input = 198, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4180   SB.rst_n = 1,SB.Input = 0, SB.rand_in_count = 3, SB.Output = 0, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 4200      driver.rst_n = 1, driver.Input = 198, driver.rand_in_count = 4
+# Time: 4200   Generate Directed Test item:   Input = 198, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4220      driver.rst_n = 1, driver.Input = 198, driver.rand_in_count = 4
+# Time: 4220   Generate Directed Test item:   Input = 198, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4240      driver.rst_n = 1, driver.Input = 164, driver.rand_in_count = 1
+# Time: 4240   Generate Directed Test item:   Input = 164, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 4260      driver.rst_n = 1, driver.Input = 250, driver.rand_in_count = 4
+# Time: 4260   Generate Directed Test item:   Input = 250, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4280      driver.rst_n = 1, driver.Input = 250, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 4280 Monitor.Input = 198, Monitor.rand_in_count = 4, Monitor.Output = 164, Monitor.Counter = 1
+# Time: 4280   Generate Directed Test item:   Input = 250, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4280   SB.rst_n = 1,SB.Input = 198, SB.rand_in_count = 4, SB.Output = 164, SB.Counter = 1
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 4280: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = 164 and the actual Counter= 1  |||||  expected Output = 198 and expected Counter = 4  
+# ********************** Driver ****************************
+# Time: 4300      driver.rst_n = 1, driver.Input = 250, driver.rand_in_count = 4
+# Time: 4300   Generate Directed Test item:   Input = 250, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4320      driver.rst_n = 1, driver.Input = 250, driver.rand_in_count = 4
+# Time: 4320   Generate Directed Test item:   Input = 250, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4340      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 4340   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 4360      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Time: 4360   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 4380      driver.rst_n = 1, driver.Input = 128, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 4380 Monitor.Input = 250, Monitor.rand_in_count = 4, Monitor.Output = 250, Monitor.Counter = 4
+# Time: 4380   Generate Directed Test item:   Input = 128, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4380   SB.rst_n = 1,SB.Input = 250, SB.rand_in_count = 4, SB.Output = 250, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 4400      driver.rst_n = 1, driver.Input = -205, driver.rand_in_count = 2
+# Time: 4400   Generate Directed Test item:   Input = -205, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 4420      driver.rst_n = 1, driver.Input = -205, driver.rand_in_count = 2
+# Time: 4420   Generate Directed Test item:   Input = -205, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 4440      driver.rst_n = 1, driver.Input = 166, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 4440 Monitor.Input = 128, Monitor.rand_in_count = 3, Monitor.Output = 128, Monitor.Counter = 3
+# Time: 4440   Generate Directed Test item:   Input = 166, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4440   SB.rst_n = 1,SB.Input = 128, SB.rand_in_count = 3, SB.Output = 128, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 4460      driver.rst_n = 1, driver.Input = 218, driver.rand_in_count = 1
+# Time: 4460   Generate Directed Test item:   Input = 218, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 4480      driver.rst_n = 1, driver.Input = -251, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 4480 Monitor.Input = 166, Monitor.rand_in_count = 1, Monitor.Output = 166, Monitor.Counter = 1
+# Time: 4480   Generate Random Test item:   Input = -251, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4480   SB.rst_n = 1,SB.Input = 166, SB.rand_in_count = 1, SB.Output = 166, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 4500      driver.rst_n = 1, driver.Input = -251, driver.rand_in_count = 3
+# Time: 4500   Generate Random Test item:   Input = -251, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 4520      driver.rst_n = 1, driver.Input = -251, driver.rand_in_count = 3
+# Time: 4520   Generate Random Test item:   Input = -251, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 4540      driver.rst_n = 1, driver.Input = -133, driver.rand_in_count = 4
+# Time: 4540   Generate Random Test item:   Input = -133, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4560      driver.rst_n = 1, driver.Input = -133, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 4560 Monitor.Input = -251, Monitor.rand_in_count = 3, Monitor.Output = -251, Monitor.Counter = 3
+# Time: 4560   Generate Random Test item:   Input = -133, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4560   SB.rst_n = 1,SB.Input = -251, SB.rand_in_count = 3, SB.Output = -251, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 4580      driver.rst_n = 1, driver.Input = -133, driver.rand_in_count = 4
+# Time: 4580   Generate Random Test item:   Input = -133, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4600      driver.rst_n = 1, driver.Input = -133, driver.rand_in_count = 4
+# Time: 4600   Generate Random Test item:   Input = -133, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4620      driver.rst_n = 1, driver.Input = 90, driver.rand_in_count = 1
+# Time: 4620   Generate Random Test item:   Input = 90, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 4640      driver.rst_n = 1, driver.Input = -111, driver.rand_in_count = 4
+# Time: 4640   Generate Random Test item:   Input = -111, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4660      driver.rst_n = 1, driver.Input = -111, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 4660 Monitor.Input = -133, Monitor.rand_in_count = 4, Monitor.Output = 90, Monitor.Counter = 1
+# Time: 4660   Generate Random Test item:   Input = -111, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4660   SB.rst_n = 1,SB.Input = -133, SB.rand_in_count = 4, SB.Output = 90, SB.Counter = 1
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 4660: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = 90 and the actual Counter= 1  |||||  expected Output = -133 and expected Counter = 4  
+# ********************** Driver ****************************
+# Time: 4680      driver.rst_n = 1, driver.Input = -111, driver.rand_in_count = 4
+# Time: 4680   Generate Random Test item:   Input = -111, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4700      driver.rst_n = 1, driver.Input = -111, driver.rand_in_count = 4
+# Time: 4700   Generate Random Test item:   Input = -111, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4720      driver.rst_n = 1, driver.Input = 54, driver.rand_in_count = 2
+# Time: 4720   Generate Random Test item:   Input = 54, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 4740      driver.rst_n = 1, driver.Input = 54, driver.rand_in_count = 2
+# Time: 4740   Generate Random Test item:   Input = 54, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 4760      driver.rst_n = 1, driver.Input = -219, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 4760 Monitor.Input = -111, Monitor.rand_in_count = 4, Monitor.Output = -111, Monitor.Counter = 4
+# Time: 4760   Generate Random Test item:   Input = -219, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4760   SB.rst_n = 1,SB.Input = -111, SB.rand_in_count = 4, SB.Output = -111, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 4780      driver.rst_n = 1, driver.Input = -219, driver.rand_in_count = 2
+# Time: 4780   Generate Random Test item:   Input = -219, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 4800      driver.rst_n = 1, driver.Input = -59, driver.rand_in_count = 1
+# Time: 4800   Generate Random Test item:   Input = -59, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 4820      driver.rst_n = 1, driver.Input = 168, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 4820 Monitor.Input = -219, Monitor.rand_in_count = 2, Monitor.Output = -219, Monitor.Counter = 2
+# Time: 4820   Generate Random Test item:   Input = 168, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4820   SB.rst_n = 1,SB.Input = -219, SB.rand_in_count = 2, SB.Output = -219, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 4840      driver.rst_n = 1, driver.Input = 168, driver.rand_in_count = 3
+# Time: 4840   Generate Random Test item:   Input = 168, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 4860      driver.rst_n = 1, driver.Input = 168, driver.rand_in_count = 3
+# Time: 4860   Generate Random Test item:   Input = 168, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 4880      driver.rst_n = 1, driver.Input = 27, driver.rand_in_count = 4
+# Time: 4880   Generate Random Test item:   Input = 27, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4900      driver.rst_n = 1, driver.Input = 27, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 4900 Monitor.Input = 168, Monitor.rand_in_count = 3, Monitor.Output = 168, Monitor.Counter = 3
+# Time: 4900   Generate Random Test item:   Input = 27, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 4900   SB.rst_n = 1,SB.Input = 168, SB.rand_in_count = 3, SB.Output = 168, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 4920      driver.rst_n = 1, driver.Input = 27, driver.rand_in_count = 4
+# Time: 4920   Generate Random Test item:   Input = 27, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4940      driver.rst_n = 1, driver.Input = 27, driver.rand_in_count = 4
+# Time: 4940   Generate Random Test item:   Input = 27, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4960      driver.rst_n = 1, driver.Input = 41, driver.rand_in_count = 4
+# Time: 4960   Generate Random Test item:   Input = 41, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 4980      driver.rst_n = 1, driver.Input = 41, driver.rand_in_count = 4
+# Time: 4980   Generate Random Test item:   Input = 41, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 5000      driver.rst_n = 1, driver.Input = 41, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 5000 Monitor.Input = 27, Monitor.rand_in_count = 4, Monitor.Output = 27, Monitor.Counter = 4
+# Time: 5000   Generate Random Test item:   Input = 41, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5000   SB.rst_n = 1,SB.Input = 27, SB.rand_in_count = 4, SB.Output = 27, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5020      driver.rst_n = 1, driver.Input = 41, driver.rand_in_count = 4
+# Time: 5020   Generate Random Test item:   Input = 41, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 5040      driver.rst_n = 1, driver.Input = -208, driver.rand_in_count = 4
+# Time: 5040   Generate Random Test item:   Input = -208, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 5060      driver.rst_n = 1, driver.Input = -208, driver.rand_in_count = 4
+# Time: 5060   Generate Random Test item:   Input = -208, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 5080      driver.rst_n = 1, driver.Input = -208, driver.rand_in_count = 4
+# Time: 5080   Generate Random Test item:   Input = -208, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 5100      driver.rst_n = 1, driver.Input = -208, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 5100 Monitor.Input = 41, Monitor.rand_in_count = 4, Monitor.Output = 41, Monitor.Counter = 4
+# Time: 5100   Generate Random Test item:   Input = -208, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5100   SB.rst_n = 1,SB.Input = 41, SB.rand_in_count = 4, SB.Output = 41, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5120      driver.rst_n = 1, driver.Input = 52, driver.rand_in_count = 1
+# Time: 5120   Generate Random Test item:   Input = 52, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 5140      driver.rst_n = 1, driver.Input = -167, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 5140 Monitor.Input = -208, Monitor.rand_in_count = 4, Monitor.Output = -208, Monitor.Counter = 4
+# Time: 5140   Generate Random Test item:   Input = -167, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5140   SB.rst_n = 1,SB.Input = -208, SB.rand_in_count = 4, SB.Output = -208, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5160      driver.rst_n = 1, driver.Input = -167, driver.rand_in_count = 3
+# Time: 5160   Generate Random Test item:   Input = -167, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5180      driver.rst_n = 1, driver.Input = -167, driver.rand_in_count = 3
+# Time: 5180   Generate Random Test item:   Input = -167, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5200      driver.rst_n = 1, driver.Input = -1, driver.rand_in_count = 3
+# Time: 5200   Generate Random Test item:   Input = -1, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5220      driver.rst_n = 1, driver.Input = -1, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 5220 Monitor.Input = -167, Monitor.rand_in_count = 3, Monitor.Output = -167, Monitor.Counter = 3
+# Time: 5220   Generate Random Test item:   Input = -1, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5220   SB.rst_n = 1,SB.Input = -167, SB.rand_in_count = 3, SB.Output = -167, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5240      driver.rst_n = 1, driver.Input = -1, driver.rand_in_count = 3
+# Time: 5240   Generate Random Test item:   Input = -1, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5260      driver.rst_n = 1, driver.Input = 174, driver.rand_in_count = 2
+# Time: 5260   Generate Random Test item:   Input = 174, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 5280      driver.rst_n = 1, driver.Input = 174, driver.rand_in_count = 2
+# Time: 5280   Generate Random Test item:   Input = 174, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 5300      driver.rst_n = 1, driver.Input = -79, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 5300 Monitor.Input = -1, Monitor.rand_in_count = 3, Monitor.Output = -1, Monitor.Counter = 3
+# Time: 5300   Generate Random Test item:   Input = -79, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5300   SB.rst_n = 1,SB.Input = -1, SB.rand_in_count = 3, SB.Output = -1, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5320      driver.rst_n = 1, driver.Input = -79, driver.rand_in_count = 2
+# Time: 5320   Generate Random Test item:   Input = -79, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 5340      driver.rst_n = 1, driver.Input = 24, driver.rand_in_count = 2
+# Time: 5340   Generate Random Test item:   Input = 24, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 5360      driver.rst_n = 1, driver.Input = 24, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 5360 Monitor.Input = -79, Monitor.rand_in_count = 2, Monitor.Output = -79, Monitor.Counter = 2
+# Time: 5360   Generate Random Test item:   Input = 24, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5360   SB.rst_n = 1,SB.Input = -79, SB.rand_in_count = 2, SB.Output = -79, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5380      driver.rst_n = 1, driver.Input = -215, driver.rand_in_count = 3
+# Time: 5380   Generate Random Test item:   Input = -215, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5400      driver.rst_n = 1, driver.Input = -215, driver.rand_in_count = 3
+# Time: 5400   Generate Random Test item:   Input = -215, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5420      driver.rst_n = 1, driver.Input = -215, driver.rand_in_count = 3
+# Time: 5420   Generate Random Test item:   Input = -215, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5440      driver.rst_n = 1, driver.Input = -145, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 5440 Monitor.Input = 24, Monitor.rand_in_count = 2, Monitor.Output = 24, Monitor.Counter = 2
+# Time: 5440   Generate Random Test item:   Input = -145, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5440   SB.rst_n = 1,SB.Input = 24, SB.rand_in_count = 2, SB.Output = 24, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5460      driver.rst_n = 1, driver.Input = -35, driver.rand_in_count = 3
+# Time: 5460   Generate Random Test item:   Input = -35, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5480      driver.rst_n = 1, driver.Input = -35, driver.rand_in_count = 3
+# Time: 5480   Generate Random Test item:   Input = -35, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5500      driver.rst_n = 1, driver.Input = -35, driver.rand_in_count = 3
+# Time: 5500   Generate Random Test item:   Input = -35, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5520      driver.rst_n = 1, driver.Input = -107, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 5520 Monitor.Input = -145, Monitor.rand_in_count = 1, Monitor.Output = -145, Monitor.Counter = 1
+# Time: 5520   Generate Random Test item:   Input = -107, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5520   SB.rst_n = 1,SB.Input = -145, SB.rand_in_count = 1, SB.Output = -145, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5540      driver.rst_n = 1, driver.Input = -107, driver.rand_in_count = 2
+# Time: 5540   Generate Random Test item:   Input = -107, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 5560      driver.rst_n = 1, driver.Input = -243, driver.rand_in_count = 2
+# Time: 5560   Generate Random Test item:   Input = -243, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 5580      driver.rst_n = 1, driver.Input = -243, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 5580 Monitor.Input = -107, Monitor.rand_in_count = 2, Monitor.Output = -107, Monitor.Counter = 2
+# Time: 5580   Generate Random Test item:   Input = -243, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5580   SB.rst_n = 1,SB.Input = -107, SB.rand_in_count = 2, SB.Output = -107, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5600      driver.rst_n = 1, driver.Input = -64, driver.rand_in_count = 1
+# Time: 5600   Generate Random Test item:   Input = -64, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 5620      driver.rst_n = 1, driver.Input = -131, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 5620 Monitor.Input = -243, Monitor.rand_in_count = 2, Monitor.Output = -243, Monitor.Counter = 2
+# Time: 5620   Generate Random Test item:   Input = -131, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5620   SB.rst_n = 1,SB.Input = -243, SB.rand_in_count = 2, SB.Output = -243, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5640      driver.rst_n = 1, driver.Input = 200, driver.rand_in_count = 3
+# Time: 5640   Generate Random Test item:   Input = 200, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5660      driver.rst_n = 1, driver.Input = 200, driver.rand_in_count = 3
+# Time: 5660   Generate Random Test item:   Input = 200, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5680      driver.rst_n = 1, driver.Input = 200, driver.rand_in_count = 3
+# Time: 5680   Generate Random Test item:   Input = 200, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5700      driver.rst_n = 1, driver.Input = 135, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 5700 Monitor.Input = -131, Monitor.rand_in_count = 1, Monitor.Output = -131, Monitor.Counter = 1
+# Time: 5700   Generate Random Test item:   Input = 135, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5700   SB.rst_n = 1,SB.Input = -131, SB.rand_in_count = 1, SB.Output = -131, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5720      driver.rst_n = 1, driver.Input = -185, driver.rand_in_count = 1
+# Time: 5720   Generate Random Test item:   Input = -185, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 5740      driver.rst_n = 1, driver.Input = -153, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 5740 Monitor.Input = 135, Monitor.rand_in_count = 1, Monitor.Output = 135, Monitor.Counter = 1
+# Time: 5740   Generate Random Test item:   Input = -153, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5740   SB.rst_n = 1,SB.Input = 135, SB.rand_in_count = 1, SB.Output = 135, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5760      driver.rst_n = 1, driver.Input = 14, driver.rand_in_count = 1
+# Time: 5760   Generate Random Test item:   Input = 14, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 5780      driver.rst_n = 1, driver.Input = -139, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 5780 Monitor.Input = -153, Monitor.rand_in_count = 1, Monitor.Output = -153, Monitor.Counter = 1
+# Time: 5780   Generate Random Test item:   Input = -139, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5780   SB.rst_n = 1,SB.Input = -153, SB.rand_in_count = 1, SB.Output = -153, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5800      driver.rst_n = 1, driver.Input = -139, driver.rand_in_count = 4
+# Time: 5800   Generate Random Test item:   Input = -139, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 5820      driver.rst_n = 1, driver.Input = -139, driver.rand_in_count = 4
+# Time: 5820   Generate Random Test item:   Input = -139, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 5840      driver.rst_n = 1, driver.Input = -139, driver.rand_in_count = 4
+# Time: 5840   Generate Random Test item:   Input = -139, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 5860      driver.rst_n = 1, driver.Input = -223, driver.rand_in_count = 3
+# Time: 5860   Generate Random Test item:   Input = -223, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5880      driver.rst_n = 1, driver.Input = -223, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 5880 Monitor.Input = -139, Monitor.rand_in_count = 4, Monitor.Output = -139, Monitor.Counter = 4
+# Time: 5880   Generate Random Test item:   Input = -223, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5880   SB.rst_n = 1,SB.Input = -139, SB.rand_in_count = 4, SB.Output = -139, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5900      driver.rst_n = 1, driver.Input = -223, driver.rand_in_count = 3
+# Time: 5900   Generate Random Test item:   Input = -223, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 5920      driver.rst_n = 1, driver.Input = 133, driver.rand_in_count = 2
+# Time: 5920   Generate Random Test item:   Input = 133, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 5940      driver.rst_n = 1, driver.Input = 133, driver.rand_in_count = 2
+# Time: 5940   Generate Random Test item:   Input = 133, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 5960      driver.rst_n = 1, driver.Input = -137, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 5960 Monitor.Input = -223, Monitor.rand_in_count = 3, Monitor.Output = -223, Monitor.Counter = 3
+# Time: 5960   Generate Random Test item:   Input = -137, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 5960   SB.rst_n = 1,SB.Input = -223, SB.rand_in_count = 3, SB.Output = -223, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 5980      driver.rst_n = 1, driver.Input = -137, driver.rand_in_count = 3
+# Time: 5980   Generate Random Test item:   Input = -137, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 6000      driver.rst_n = 1, driver.Input = -137, driver.rand_in_count = 3
+# Time: 6000   Generate Random Test item:   Input = -137, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 6020      driver.rst_n = 1, driver.Input = 250, driver.rand_in_count = 2
+# Time: 6020   Generate Random Test item:   Input = 250, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6040      driver.rst_n = 1, driver.Input = 250, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 6040 Monitor.Input = -137, Monitor.rand_in_count = 3, Monitor.Output = -137, Monitor.Counter = 3
+# Time: 6040   Generate Random Test item:   Input = 250, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6040   SB.rst_n = 1,SB.Input = -137, SB.rand_in_count = 3, SB.Output = -137, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6060      driver.rst_n = 1, driver.Input = -24, driver.rand_in_count = 2
+# Time: 6060   Generate Random Test item:   Input = -24, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6080      driver.rst_n = 1, driver.Input = -24, driver.rand_in_count = 2
+# Time: 6080   Generate Random Test item:   Input = -24, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6100      driver.rst_n = 1, driver.Input = 205, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 6100 Monitor.Input = 250, Monitor.rand_in_count = 2, Monitor.Output = 250, Monitor.Counter = 2
+# Time: 6100   Generate Random Test item:   Input = 205, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6100   SB.rst_n = 1,SB.Input = 250, SB.rand_in_count = 2, SB.Output = 250, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6120      driver.rst_n = 1, driver.Input = 94, driver.rand_in_count = 4
+# Time: 6120   Generate Random Test item:   Input = 94, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6140      driver.rst_n = 1, driver.Input = 94, driver.rand_in_count = 4
+# Time: 6140   Generate Random Test item:   Input = 94, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6160      driver.rst_n = 1, driver.Input = 94, driver.rand_in_count = 4
+# Time: 6160   Generate Random Test item:   Input = 94, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6180      driver.rst_n = 1, driver.Input = 94, driver.rand_in_count = 4
+# Time: 6180   Generate Random Test item:   Input = 94, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6200      driver.rst_n = 1, driver.Input = 16, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 6200 Monitor.Input = 205, Monitor.rand_in_count = 1, Monitor.Output = 205, Monitor.Counter = 1
+# Time: 6200   Generate Random Test item:   Input = 16, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6200   SB.rst_n = 1,SB.Input = 205, SB.rand_in_count = 1, SB.Output = 205, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6220      driver.rst_n = 1, driver.Input = 16, driver.rand_in_count = 2
+# Time: 6220   Generate Random Test item:   Input = 16, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6240      driver.rst_n = 1, driver.Input = -48, driver.rand_in_count = 4
+# Time: 6240   Generate Random Test item:   Input = -48, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6260      driver.rst_n = 1, driver.Input = -48, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 6260 Monitor.Input = 16, Monitor.rand_in_count = 2, Monitor.Output = 16, Monitor.Counter = 2
+# Time: 6260   Generate Random Test item:   Input = -48, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6260   SB.rst_n = 1,SB.Input = 16, SB.rand_in_count = 2, SB.Output = 16, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6280      driver.rst_n = 1, driver.Input = -48, driver.rand_in_count = 4
+# Time: 6280   Generate Random Test item:   Input = -48, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6300      driver.rst_n = 1, driver.Input = -48, driver.rand_in_count = 4
+# Time: 6300   Generate Random Test item:   Input = -48, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6320      driver.rst_n = 1, driver.Input = -161, driver.rand_in_count = 3
+# Time: 6320   Generate Random Test item:   Input = -161, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 6340      driver.rst_n = 1, driver.Input = -161, driver.rand_in_count = 3
+# Time: 6340   Generate Random Test item:   Input = -161, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 6360      driver.rst_n = 1, driver.Input = -161, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 6360 Monitor.Input = -48, Monitor.rand_in_count = 4, Monitor.Output = -48, Monitor.Counter = 4
+# Time: 6360   Generate Random Test item:   Input = -161, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6360   SB.rst_n = 1,SB.Input = -48, SB.rand_in_count = 4, SB.Output = -48, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6380      driver.rst_n = 1, driver.Input = 194, driver.rand_in_count = 2
+# Time: 6380   Generate Random Test item:   Input = 194, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6400      driver.rst_n = 1, driver.Input = 194, driver.rand_in_count = 2
+# Time: 6400   Generate Random Test item:   Input = 194, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6420      driver.rst_n = 1, driver.Input = 86, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 6420 Monitor.Input = -161, Monitor.rand_in_count = 3, Monitor.Output = -161, Monitor.Counter = 3
+# Time: 6420   Generate Random Test item:   Input = 86, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6420   SB.rst_n = 1,SB.Input = -161, SB.rand_in_count = 3, SB.Output = -161, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6440      driver.rst_n = 1, driver.Input = -221, driver.rand_in_count = 2
+# Time: 6440   Generate Random Test item:   Input = -221, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6460      driver.rst_n = 1, driver.Input = -221, driver.rand_in_count = 2
+# Time: 6460   Generate Random Test item:   Input = -221, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6480      driver.rst_n = 1, driver.Input = 111, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 6480 Monitor.Input = 86, Monitor.rand_in_count = 1, Monitor.Output = 86, Monitor.Counter = 1
+# Time: 6480   Generate Random Test item:   Input = 111, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6480   SB.rst_n = 1,SB.Input = 86, SB.rand_in_count = 1, SB.Output = 86, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6500      driver.rst_n = 1, driver.Input = 21, driver.rand_in_count = 2
+# Time: 6500   Generate Random Test item:   Input = 21, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6520      driver.rst_n = 1, driver.Input = 21, driver.rand_in_count = 2
+# Time: 6520   Generate Random Test item:   Input = 21, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6540      driver.rst_n = 1, driver.Input = -230, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 6540 Monitor.Input = 111, Monitor.rand_in_count = 1, Monitor.Output = 111, Monitor.Counter = 1
+# Time: 6540   Generate Random Test item:   Input = -230, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6540   SB.rst_n = 1,SB.Input = 111, SB.rand_in_count = 1, SB.Output = 111, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6560      driver.rst_n = 1, driver.Input = -40, driver.rand_in_count = 2
+# Time: 6560   Generate Random Test item:   Input = -40, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6580      driver.rst_n = 1, driver.Input = -40, driver.rand_in_count = 2
+# Time: 6580   Generate Random Test item:   Input = -40, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6600      driver.rst_n = 1, driver.Input = 254, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 6600 Monitor.Input = -230, Monitor.rand_in_count = 1, Monitor.Output = -230, Monitor.Counter = 1
+# Time: 6600   Generate Random Test item:   Input = 254, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6600   SB.rst_n = 1,SB.Input = -230, SB.rand_in_count = 1, SB.Output = -230, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6620      driver.rst_n = 1, driver.Input = 254, driver.rand_in_count = 4
+# Time: 6620   Generate Random Test item:   Input = 254, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6640      driver.rst_n = 1, driver.Input = 254, driver.rand_in_count = 4
+# Time: 6640   Generate Random Test item:   Input = 254, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6660      driver.rst_n = 1, driver.Input = 254, driver.rand_in_count = 4
+# Time: 6660   Generate Random Test item:   Input = 254, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6680      driver.rst_n = 1, driver.Input = 247, driver.rand_in_count = 2
+# Time: 6680   Generate Random Test item:   Input = 247, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6700      driver.rst_n = 1, driver.Input = 247, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 6700 Monitor.Input = 254, Monitor.rand_in_count = 4, Monitor.Output = 254, Monitor.Counter = 4
+# Time: 6700   Generate Random Test item:   Input = 247, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6700   SB.rst_n = 1,SB.Input = 254, SB.rand_in_count = 4, SB.Output = 254, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6720      driver.rst_n = 1, driver.Input = -122, driver.rand_in_count = 3
+# Time: 6720   Generate Random Test item:   Input = -122, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 6740      driver.rst_n = 1, driver.Input = -122, driver.rand_in_count = 3
+# Time: 6740   Generate Random Test item:   Input = -122, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 6760      driver.rst_n = 1, driver.Input = -122, driver.rand_in_count = 3
+# Time: 6760   Generate Random Test item:   Input = -122, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 6780      driver.rst_n = 1, driver.Input = -11, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 6780 Monitor.Input = 247, Monitor.rand_in_count = 2, Monitor.Output = 247, Monitor.Counter = 2
+# Time: 6780   Generate Random Test item:   Input = -11, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6780   SB.rst_n = 1,SB.Input = 247, SB.rand_in_count = 2, SB.Output = 247, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6800      driver.rst_n = 1, driver.Input = -11, driver.rand_in_count = 2
+# Time: 6800   Generate Random Test item:   Input = -11, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6820      driver.rst_n = 1, driver.Input = 236, driver.rand_in_count = 2
+# Time: 6820   Generate Random Test item:   Input = 236, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 6840      driver.rst_n = 1, driver.Input = 236, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 6840 Monitor.Input = -11, Monitor.rand_in_count = 2, Monitor.Output = -11, Monitor.Counter = 2
+# Time: 6840   Generate Random Test item:   Input = 236, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6840   SB.rst_n = 1,SB.Input = -11, SB.rand_in_count = 2, SB.Output = -11, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6860      driver.rst_n = 1, driver.Input = -135, driver.rand_in_count = 4
+# Time: 6860   Generate Random Test item:   Input = -135, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6880      driver.rst_n = 1, driver.Input = -135, driver.rand_in_count = 4
+# Time: 6880   Generate Random Test item:   Input = -135, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6900      driver.rst_n = 1, driver.Input = -135, driver.rand_in_count = 4
+# Time: 6900   Generate Random Test item:   Input = -135, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6920      driver.rst_n = 1, driver.Input = -135, driver.rand_in_count = 4
+# Time: 6920   Generate Random Test item:   Input = -135, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 6940      driver.rst_n = 1, driver.Input = -55, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 6940 Monitor.Input = 236, Monitor.rand_in_count = 2, Monitor.Output = 236, Monitor.Counter = 2
+# Time: 6940   Generate Random Test item:   Input = -55, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6940   SB.rst_n = 1,SB.Input = 236, SB.rand_in_count = 2, SB.Output = 236, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 6960      driver.rst_n = 1, driver.Input = 78, driver.rand_in_count = 1
+# Time: 6960   Generate Random Test item:   Input = 78, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 6980      driver.rst_n = 1, driver.Input = 80, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 6980 Monitor.Input = -55, Monitor.rand_in_count = 1, Monitor.Output = -55, Monitor.Counter = 1
+# Time: 6980   Generate Random Test item:   Input = 80, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 6980   SB.rst_n = 1,SB.Input = -55, SB.rand_in_count = 1, SB.Output = -55, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7000      driver.rst_n = 1, driver.Input = 80, driver.rand_in_count = 2
+# Time: 7000   Generate Random Test item:   Input = 80, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7020      driver.rst_n = 1, driver.Input = -177, driver.rand_in_count = 2
+# Time: 7020   Generate Random Test item:   Input = -177, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7040      driver.rst_n = 1, driver.Input = -177, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 7040 Monitor.Input = 80, Monitor.rand_in_count = 2, Monitor.Output = 80, Monitor.Counter = 2
+# Time: 7040   Generate Random Test item:   Input = -177, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7040   SB.rst_n = 1,SB.Input = 80, SB.rand_in_count = 2, SB.Output = 80, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7060      driver.rst_n = 1, driver.Input = -209, driver.rand_in_count = 1
+# Time: 7060   Generate Random Test item:   Input = -209, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 7080      driver.rst_n = 1, driver.Input = -88, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 7080 Monitor.Input = -177, Monitor.rand_in_count = 2, Monitor.Output = -177, Monitor.Counter = 2
+# Time: 7080   Generate Random Test item:   Input = -88, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7080   SB.rst_n = 1,SB.Input = -177, SB.rand_in_count = 2, SB.Output = -177, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7100      driver.rst_n = 1, driver.Input = -88, driver.rand_in_count = 2
+# Time: 7100   Generate Random Test item:   Input = -88, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7120      driver.rst_n = 1, driver.Input = -10, driver.rand_in_count = 1
+# Time: 7120   Generate Random Test item:   Input = -10, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 7140      driver.rst_n = 1, driver.Input = -71, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 7140 Monitor.Input = -88, Monitor.rand_in_count = 2, Monitor.Output = -88, Monitor.Counter = 2
+# Time: 7140   Generate Random Test item:   Input = -71, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7140   SB.rst_n = 1,SB.Input = -88, SB.rand_in_count = 2, SB.Output = -88, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7160      driver.rst_n = 1, driver.Input = -71, driver.rand_in_count = 2
+# Time: 7160   Generate Random Test item:   Input = -71, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7180      driver.rst_n = 1, driver.Input = 80, driver.rand_in_count = 3
+# Time: 7180   Generate Random Test item:   Input = 80, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 7200      driver.rst_n = 1, driver.Input = 80, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 7200 Monitor.Input = -71, Monitor.rand_in_count = 2, Monitor.Output = -71, Monitor.Counter = 2
+# Time: 7200   Generate Random Test item:   Input = 80, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7200   SB.rst_n = 1,SB.Input = -71, SB.rand_in_count = 2, SB.Output = -71, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7220      driver.rst_n = 1, driver.Input = 80, driver.rand_in_count = 3
+# Time: 7220   Generate Random Test item:   Input = 80, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 7240      driver.rst_n = 1, driver.Input = 175, driver.rand_in_count = 2
+# Time: 7240   Generate Random Test item:   Input = 175, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7260      driver.rst_n = 1, driver.Input = 175, driver.rand_in_count = 2
+# Time: 7260   Generate Random Test item:   Input = 175, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7280      driver.rst_n = 1, driver.Input = -211, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 7280 Monitor.Input = 80, Monitor.rand_in_count = 3, Monitor.Output = 80, Monitor.Counter = 3
+# Time: 7280   Generate Random Test item:   Input = -211, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7280   SB.rst_n = 1,SB.Input = 80, SB.rand_in_count = 3, SB.Output = 80, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7300      driver.rst_n = 1, driver.Input = -211, driver.rand_in_count = 4
+# Time: 7300   Generate Random Test item:   Input = -211, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7320      driver.rst_n = 1, driver.Input = -211, driver.rand_in_count = 4
+# Time: 7320   Generate Random Test item:   Input = -211, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7340      driver.rst_n = 1, driver.Input = -211, driver.rand_in_count = 4
+# Time: 7340   Generate Random Test item:   Input = -211, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7360      driver.rst_n = 1, driver.Input = -102, driver.rand_in_count = 3
+# Time: 7360   Generate Random Test item:   Input = -102, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 7380      driver.rst_n = 1, driver.Input = -102, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 7380 Monitor.Input = -211, Monitor.rand_in_count = 4, Monitor.Output = -211, Monitor.Counter = 4
+# Time: 7380   Generate Random Test item:   Input = -102, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7380   SB.rst_n = 1,SB.Input = -211, SB.rand_in_count = 4, SB.Output = -211, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7400      driver.rst_n = 1, driver.Input = -102, driver.rand_in_count = 3
+# Time: 7400   Generate Random Test item:   Input = -102, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 7420      driver.rst_n = 1, driver.Input = -191, driver.rand_in_count = 1
+# Time: 7420   Generate Random Test item:   Input = -191, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 7440      driver.rst_n = 1, driver.Input = -225, driver.rand_in_count = 4
+# Time: 7440   Generate Random Test item:   Input = -225, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7460      driver.rst_n = 1, driver.Input = -225, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 7460 Monitor.Input = -102, Monitor.rand_in_count = 3, Monitor.Output = -191, Monitor.Counter = 1
+# Time: 7460   Generate Random Test item:   Input = -225, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7460   SB.rst_n = 1,SB.Input = -102, SB.rand_in_count = 3, SB.Output = -191, SB.Counter = 1
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 7460: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = -191 and the actual Counter= 1  |||||  expected Output = -102 and expected Counter = 3  
+# ********************** Driver ****************************
+# Time: 7480      driver.rst_n = 1, driver.Input = -225, driver.rand_in_count = 4
+# Time: 7480   Generate Random Test item:   Input = -225, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7500      driver.rst_n = 1, driver.Input = -225, driver.rand_in_count = 4
+# Time: 7500   Generate Random Test item:   Input = -225, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7520      driver.rst_n = 1, driver.Input = -17, driver.rand_in_count = 2
+# Time: 7520   Generate Random Test item:   Input = -17, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7540      driver.rst_n = 1, driver.Input = -17, driver.rand_in_count = 2
+# Time: 7540   Generate Random Test item:   Input = -17, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7560      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 7560 Monitor.Input = -225, Monitor.rand_in_count = 4, Monitor.Output = -225, Monitor.Counter = 4
+# Time: 7560   Generate Random Test item:   Input = 0, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7560   SB.rst_n = 1,SB.Input = -225, SB.rand_in_count = 4, SB.Output = -225, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7580      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Time: 7580   Generate Random Test item:   Input = 0, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7600      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Time: 7600   Generate Random Test item:   Input = 0, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7620      driver.rst_n = 1, driver.Input = 0, driver.rand_in_count = 4
+# Time: 7620   Generate Random Test item:   Input = 0, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7640      driver.rst_n = 1, driver.Input = -21, driver.rand_in_count = 2
+# Time: 7640   Generate Random Test item:   Input = -21, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7660      driver.rst_n = 1, driver.Input = -21, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 7660 Monitor.Input = 0, Monitor.rand_in_count = 4, Monitor.Output = 0, Monitor.Counter = 4
+# Time: 7660   Generate Random Test item:   Input = -21, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7660   SB.rst_n = 1,SB.Input = 0, SB.rand_in_count = 4, SB.Output = 0, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7680      driver.rst_n = 1, driver.Input = -197, driver.rand_in_count = 2
+# Time: 7680   Generate Random Test item:   Input = -197, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7700      driver.rst_n = 1, driver.Input = -197, driver.rand_in_count = 2
+# Time: 7700   Generate Random Test item:   Input = -197, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7720      driver.rst_n = 1, driver.Input = -80, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 7720 Monitor.Input = -21, Monitor.rand_in_count = 2, Monitor.Output = -21, Monitor.Counter = 2
+# Time: 7720   Generate Random Test item:   Input = -80, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7720   SB.rst_n = 1,SB.Input = -21, SB.rand_in_count = 2, SB.Output = -21, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7740      driver.rst_n = 1, driver.Input = -80, driver.rand_in_count = 4
+# Time: 7740   Generate Random Test item:   Input = -80, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7760      driver.rst_n = 1, driver.Input = -80, driver.rand_in_count = 4
+# Time: 7760   Generate Random Test item:   Input = -80, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7780      driver.rst_n = 1, driver.Input = -80, driver.rand_in_count = 4
+# Time: 7780   Generate Random Test item:   Input = -80, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7800      driver.rst_n = 1, driver.Input = 172, driver.rand_in_count = 4
+# Time: 7800   Generate Random Test item:   Input = 172, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7820      driver.rst_n = 1, driver.Input = 172, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 7820 Monitor.Input = -80, Monitor.rand_in_count = 4, Monitor.Output = -80, Monitor.Counter = 4
+# Time: 7820   Generate Random Test item:   Input = 172, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7820   SB.rst_n = 1,SB.Input = -80, SB.rand_in_count = 4, SB.Output = -80, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7840      driver.rst_n = 1, driver.Input = 172, driver.rand_in_count = 4
+# Time: 7840   Generate Random Test item:   Input = 172, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7860      driver.rst_n = 1, driver.Input = 172, driver.rand_in_count = 4
+# Time: 7860   Generate Random Test item:   Input = 172, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 7880      driver.rst_n = 1, driver.Input = 218, driver.rand_in_count = 2
+# Time: 7880   Generate Random Test item:   Input = 218, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7900      driver.rst_n = 1, driver.Input = 218, driver.rand_in_count = 2
+# Time: 7900   Generate Random Test item:   Input = 218, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7920      driver.rst_n = 1, driver.Input = 93, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 7920 Monitor.Input = 172, Monitor.rand_in_count = 4, Monitor.Output = 172, Monitor.Counter = 4
+# Time: 7920   Generate Random Test item:   Input = 93, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7920   SB.rst_n = 1,SB.Input = 172, SB.rand_in_count = 4, SB.Output = 172, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 7940      driver.rst_n = 1, driver.Input = 93, driver.rand_in_count = 2
+# Time: 7940   Generate Random Test item:   Input = 93, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7960      driver.rst_n = 1, driver.Input = -133, driver.rand_in_count = 2
+# Time: 7960   Generate Random Test item:   Input = -133, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 7980      driver.rst_n = 1, driver.Input = -133, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 7980 Monitor.Input = 93, Monitor.rand_in_count = 2, Monitor.Output = 93, Monitor.Counter = 2
+# Time: 7980   Generate Random Test item:   Input = -133, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 7980   SB.rst_n = 1,SB.Input = 93, SB.rand_in_count = 2, SB.Output = 93, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8000      driver.rst_n = 1, driver.Input = 64, driver.rand_in_count = 4
+# Time: 8000   Generate Random Test item:   Input = 64, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8020      driver.rst_n = 1, driver.Input = 64, driver.rand_in_count = 4
+# Time: 8020   Generate Random Test item:   Input = 64, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8040      driver.rst_n = 1, driver.Input = 64, driver.rand_in_count = 4
+# Time: 8040   Generate Random Test item:   Input = 64, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8060      driver.rst_n = 1, driver.Input = 64, driver.rand_in_count = 4
+# Time: 8060   Generate Random Test item:   Input = 64, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8080      driver.rst_n = 1, driver.Input = -29, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 8080 Monitor.Input = -133, Monitor.rand_in_count = 2, Monitor.Output = -133, Monitor.Counter = 2
+# Time: 8080   Generate Random Test item:   Input = -29, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8080   SB.rst_n = 1,SB.Input = -133, SB.rand_in_count = 2, SB.Output = -133, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8100      driver.rst_n = 1, driver.Input = -29, driver.rand_in_count = 2
+# Time: 8100   Generate Random Test item:   Input = -29, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 8120      driver.rst_n = 1, driver.Input = -102, driver.rand_in_count = 3
+# Time: 8120   Generate Random Test item:   Input = -102, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 8140      driver.rst_n = 1, driver.Input = -102, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 8140 Monitor.Input = -29, Monitor.rand_in_count = 2, Monitor.Output = -29, Monitor.Counter = 2
+# Time: 8140   Generate Random Test item:   Input = -102, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8140   SB.rst_n = 1,SB.Input = -29, SB.rand_in_count = 2, SB.Output = -29, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8160      driver.rst_n = 1, driver.Input = -102, driver.rand_in_count = 3
+# Time: 8160   Generate Random Test item:   Input = -102, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 8180      driver.rst_n = 1, driver.Input = 83, driver.rand_in_count = 3
+# Time: 8180   Generate Random Test item:   Input = 83, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 8200      driver.rst_n = 1, driver.Input = 83, driver.rand_in_count = 3
+# Time: 8200   Generate Random Test item:   Input = 83, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 8220      driver.rst_n = 1, driver.Input = 83, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 8220 Monitor.Input = -102, Monitor.rand_in_count = 3, Monitor.Output = -102, Monitor.Counter = 3
+# Time: 8220   Generate Random Test item:   Input = 83, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8220   SB.rst_n = 1,SB.Input = -102, SB.rand_in_count = 3, SB.Output = -102, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8240      driver.rst_n = 1, driver.Input = 145, driver.rand_in_count = 4
+# Time: 8240   Generate Random Test item:   Input = 145, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8260      driver.rst_n = 1, driver.Input = 145, driver.rand_in_count = 4
+# Time: 8260   Generate Random Test item:   Input = 145, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8280      driver.rst_n = 1, driver.Input = 145, driver.rand_in_count = 4
+# Time: 8280   Generate Random Test item:   Input = 145, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8300      driver.rst_n = 1, driver.Input = 145, driver.rand_in_count = 4
+# Time: 8300   Generate Random Test item:   Input = 145, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8320      driver.rst_n = 1, driver.Input = 140, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 8320 Monitor.Input = 83, Monitor.rand_in_count = 3, Monitor.Output = 83, Monitor.Counter = 3
+# Time: 8320   Generate Random Test item:   Input = 140, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8320   SB.rst_n = 1,SB.Input = 83, SB.rand_in_count = 3, SB.Output = 83, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8340      driver.rst_n = 1, driver.Input = 140, driver.rand_in_count = 2
+# Time: 8340   Generate Random Test item:   Input = 140, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 8360      driver.rst_n = 1, driver.Input = 145, driver.rand_in_count = 3
+# Time: 8360   Generate Random Test item:   Input = 145, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 8380      driver.rst_n = 1, driver.Input = 145, driver.rand_in_count = 3
+# Final Coverage --------------------> 75.00%
+# Time: 8380 Monitor.Input = 140, Monitor.rand_in_count = 2, Monitor.Output = 140, Monitor.Counter = 2
+# Time: 8380   Generate Random Test item:   Input = 145, Repetitios = 3
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8380   SB.rst_n = 1,SB.Input = 140, SB.rand_in_count = 2, SB.Output = 140, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8400      driver.rst_n = 1, driver.Input = 145, driver.rand_in_count = 3
+# Time: 8400   Generate Random Test item:   Input = 145, Repetitios = 3
+# ********************** Driver ****************************
+# Time: 8420      driver.rst_n = 1, driver.Input = 147, driver.rand_in_count = 4
+# Time: 8420   Generate Random Test item:   Input = 147, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8440      driver.rst_n = 1, driver.Input = 147, driver.rand_in_count = 4
+# Time: 8440   Generate Random Test item:   Input = 147, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8460      driver.rst_n = 1, driver.Input = 147, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 8460 Monitor.Input = 145, Monitor.rand_in_count = 3, Monitor.Output = 145, Monitor.Counter = 3
+# Time: 8460   Generate Random Test item:   Input = 147, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8460   SB.rst_n = 1,SB.Input = 145, SB.rand_in_count = 3, SB.Output = 145, SB.Counter = 3
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8480      driver.rst_n = 1, driver.Input = 147, driver.rand_in_count = 4
+# Time: 8480   Generate Random Test item:   Input = 147, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8500      driver.rst_n = 1, driver.Input = -22, driver.rand_in_count = 2
+# Time: 8500   Generate Random Test item:   Input = -22, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 8520      driver.rst_n = 1, driver.Input = -22, driver.rand_in_count = 2
+# Time: 8520   Generate Random Test item:   Input = -22, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 8540      driver.rst_n = 1, driver.Input = 224, driver.rand_in_count = 2
+# Time: 8540   Generate Random Test item:   Input = 224, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 8560      driver.rst_n = 1, driver.Input = 224, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 8560 Monitor.Input = 147, Monitor.rand_in_count = 4, Monitor.Output = -22, Monitor.Counter = 2
+# Time: 8560   Generate Random Test item:   Input = 224, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8560   SB.rst_n = 1,SB.Input = 147, SB.rand_in_count = 4, SB.Output = -22, SB.Counter = 2
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 8560: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = -22 and the actual Counter= 2  |||||  expected Output = 147 and expected Counter = 4  
+# ********************** Driver ****************************
+# Time: 8580      driver.rst_n = 1, driver.Input = -214, driver.rand_in_count = 4
+# Time: 8580   Generate Random Test item:   Input = -214, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8600      driver.rst_n = 1, driver.Input = -214, driver.rand_in_count = 4
+# Time: 8600   Generate Random Test item:   Input = -214, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8620      driver.rst_n = 1, driver.Input = -214, driver.rand_in_count = 4
+# Time: 8620   Generate Random Test item:   Input = -214, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8640      driver.rst_n = 1, driver.Input = -214, driver.rand_in_count = 4
+# Time: 8640   Generate Random Test item:   Input = -214, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8660      driver.rst_n = 1, driver.Input = -135, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 8660 Monitor.Input = 224, Monitor.rand_in_count = 2, Monitor.Output = 224, Monitor.Counter = 2
+# Time: 8660   Generate Random Test item:   Input = -135, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8660   SB.rst_n = 1,SB.Input = 224, SB.rand_in_count = 2, SB.Output = 224, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8680      driver.rst_n = 1, driver.Input = -135, driver.rand_in_count = 4
+# Time: 8680   Generate Random Test item:   Input = -135, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8700      driver.rst_n = 1, driver.Input = -135, driver.rand_in_count = 4
+# Time: 8700   Generate Random Test item:   Input = -135, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8720      driver.rst_n = 1, driver.Input = -135, driver.rand_in_count = 4
+# Time: 8720   Generate Random Test item:   Input = -135, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 8740      driver.rst_n = 1, driver.Input = -191, driver.rand_in_count = 2
+# Time: 8740   Generate Random Test item:   Input = -191, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 8760      driver.rst_n = 1, driver.Input = -191, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 8760 Monitor.Input = -135, Monitor.rand_in_count = 4, Monitor.Output = -135, Monitor.Counter = 4
+# Time: 8760   Generate Random Test item:   Input = -191, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8760   SB.rst_n = 1,SB.Input = -135, SB.rand_in_count = 4, SB.Output = -135, SB.Counter = 4
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8780      driver.rst_n = 1, driver.Input = 170, driver.rand_in_count = 1
+# Time: 8780   Generate Random Test item:   Input = 170, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 8800      driver.rst_n = 1, driver.Input = -103, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 8800 Monitor.Input = -191, Monitor.rand_in_count = 2, Monitor.Output = -191, Monitor.Counter = 2
+# Time: 8800   Generate Random Test item:   Input = -103, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8800   SB.rst_n = 1,SB.Input = -191, SB.rand_in_count = 2, SB.Output = -191, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8820      driver.rst_n = 1, driver.Input = -103, driver.rand_in_count = 2
+# Time: 8820   Generate Random Test item:   Input = -103, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 8840      driver.rst_n = 1, driver.Input = -175, driver.rand_in_count = 1
+# Time: 8840   Generate Random Test item:   Input = -175, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 8860      driver.rst_n = 1, driver.Input = 129, driver.rand_in_count = 1
+# Final Coverage --------------------> 75.00%
+# Time: 8860 Monitor.Input = -103, Monitor.rand_in_count = 2, Monitor.Output = -103, Monitor.Counter = 2
+# Time: 8860   Generate Random Test item:   Input = 129, Repetitios = 1
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8860   SB.rst_n = 1,SB.Input = -103, SB.rand_in_count = 2, SB.Output = -103, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8880      driver.rst_n = 1, driver.Input = 54, driver.rand_in_count = 2
+# Time: 8880   Generate Random Test item:   Input = 54, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 8900      driver.rst_n = 1, driver.Input = 54, driver.rand_in_count = 2
+# Time: 8900   Generate Random Test item:   Input = 54, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 8920      driver.rst_n = 1, driver.Input = 12, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 8920 Monitor.Input = 129, Monitor.rand_in_count = 1, Monitor.Output = 129, Monitor.Counter = 1
+# Time: 8920   Generate Random Test item:   Input = 12, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8920   SB.rst_n = 1,SB.Input = 129, SB.rand_in_count = 1, SB.Output = 129, SB.Counter = 1
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 8940      driver.rst_n = 1, driver.Input = 12, driver.rand_in_count = 2
+# Time: 8940   Generate Random Test item:   Input = 12, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 8960      driver.rst_n = 1, driver.Input = -177, driver.rand_in_count = 1
+# Time: 8960   Generate Random Test item:   Input = -177, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 8980      driver.rst_n = 1, driver.Input = 254, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 8980 Monitor.Input = 12, Monitor.rand_in_count = 2, Monitor.Output = 12, Monitor.Counter = 2
+# Time: 8980   Generate Random Test item:   Input = 254, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 8980   SB.rst_n = 1,SB.Input = 12, SB.rand_in_count = 2, SB.Output = 12, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 9000      driver.rst_n = 1, driver.Input = 254, driver.rand_in_count = 2
+# Time: 9000   Generate Random Test item:   Input = 254, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 9020      driver.rst_n = 1, driver.Input = -25, driver.rand_in_count = 4
+# Time: 9020   Generate Random Test item:   Input = -25, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 9040      driver.rst_n = 1, driver.Input = -25, driver.rand_in_count = 4
+# Final Coverage --------------------> 75.00%
+# Time: 9040 Monitor.Input = 254, Monitor.rand_in_count = 2, Monitor.Output = 254, Monitor.Counter = 2
+# Time: 9040   Generate Random Test item:   Input = -25, Repetitios = 4
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 9040   SB.rst_n = 1,SB.Input = 254, SB.rand_in_count = 2, SB.Output = 254, SB.Counter = 2
+# No Errors/ Mismatch found :) 
+# ------------------------------------------***********************--------------------------------------------------------
+# ********************** Driver ****************************
+# Time: 9060      driver.rst_n = 1, driver.Input = -25, driver.rand_in_count = 4
+# Time: 9060   Generate Random Test item:   Input = -25, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 9080      driver.rst_n = 1, driver.Input = -25, driver.rand_in_count = 4
+# Time: 9080   Generate Random Test item:   Input = -25, Repetitios = 4
+# ********************** Driver ****************************
+# Time: 9100      driver.rst_n = 1, driver.Input = 249, driver.rand_in_count = 1
+# Time: 9100   Generate Random Test item:   Input = 249, Repetitios = 1
+# ********************** Driver ****************************
+# Time: 9120      driver.rst_n = 1, driver.Input = -178, driver.rand_in_count = 2
+# Time: 9120   Generate Random Test item:   Input = -178, Repetitios = 2
+# ********************** Driver ****************************
+# Time: 9140      driver.rst_n = 1, driver.Input = -178, driver.rand_in_count = 2
+# Final Coverage --------------------> 75.00%
+# Time: 9140 Monitor.Input = -25, Monitor.rand_in_count = 4, Monitor.Output = 249, Monitor.Counter = 1
+# Time: 9140   Generate Random Test item:   Input = -178, Repetitios = 2
+# ------------------------------------------****** Scoreboard ******--------------------------------------------------------
+# Time: 9140   SB.rst_n = 1,SB.Input = -25, SB.rand_in_count = 4, SB.Output = 249, SB.Counter = 1
+# UVM_ERROR S:/GP_UVM/RLE/pack1/Scoreboard.sv(72) @ 9140: uvm_test_top.env.scoreboard [my_scoreboard] failure!! the actual Output = 249 and the actual Counter= 1  |||||  expected Output = -25 and expected Counter = 4  
+# UVM_INFO S:/GP_UVM/RLE/uvm-1.2/uvm-1.2/src/base/uvm_objection.svh(1270) @ 9150: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO S:/GP_UVM/RLE/uvm-1.2/uvm-1.2/src/base/uvm_report_server.svh(847) @ 9150: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   28
+# UVM_WARNING :    0
+# UVM_ERROR :   18
+# UVM_FATAL :    0
+# ** Report counts by id
+# [NO_DPI_TSTNAME]     1
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVM/COMP/NAMECHECK]     1
+# [UVM/RELNOTES]     1
+# [my_agent]     3
+# [my_driver]     3
+# [my_env]     3
+# [my_monitor]     3
+# [my_scoreboard]    21
+# [my_sequencer]     2
+# [my_subscirber]     3
+# [my_test]     3
+# 
+# ** Note: $finish    : S:/GP_UVM/RLE/uvm-1.2/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 9150 ns  Iteration: 68  Instance: /TB_Top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at S:/GP_UVM/RLE/uvm-1.2/uvm-1.2/src/base/uvm_root.svh line 517
+#  coverage report -detail
+# Coverage Report by instance with details
+# 
+# =================================================================================
+# === Instance: /pack1
+# === Design Unit: work.pack1
+# =================================================================================
+# 
+# Assertion Coverage:
+#     Assertions                       4         4         0   100.00%
+# --------------------------------------------------------------------
+# Name                 File(Line)                   Failure      Pass 
+#                                                   Count        Count
+# --------------------------------------------------------------------
+# /pack1/Reset_Sequence/body/immed__29
+#                      S:/GP_UVM/RLE/pack1/Sequence.sv(29)
+#                                                         0          1
+# /pack1/Test_Sequence/body/immed__58
+#                      S:/GP_UVM/RLE/pack1/Sequence.sv(58)
+#                                                         0          1
+# /pack1/Direct_Sequence/body/#ublk#7764449#111/immed__113
+#                      S:/GP_UVM/RLE/pack1/Sequence.sv(113)
+#                                                         0          1
+# /pack1/Direct_Sequence/body/#ublk#7764449#119/immed__121
+#                      S:/GP_UVM/RLE/pack1/Sequence.sv(121)
+#                                                         0          1
+# 
+# Covergroup Coverage:
+#     Covergroups                      1        na        na    75.00%
+#         Coverpoints/Crosses          2        na        na        na
+#             Covergroup Bins          7         6         1    85.71%
+# ----------------------------------------------------------------------------------------------------------
+# Covergroup                                             Metric       Goal       Bins    Status               
+#                                                                                                          
+# ----------------------------------------------------------------------------------------------------------
+#  TYPE /pack1/my_subscirber/Design_signals              75.00%        100          -    Uncovered            
+#     covered/total bins:                                     6          7          -                      
+#     missing/total bins:                                     1          7          -                      
+#     % Hit:                                             85.71%        100          -                      
+#     Coverpoint reset_case                              50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin auto[0]                                         0          1          -    ZERO                 
+#         bin auto[1]                                       121          1          -    Covered              
+#     Coverpoint Input_case                             100.00%        100          -    Covered              
+#         covered/total bins:                                 5          5          -                      
+#         missing/total bins:                                 0          5          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin Input_Lowest_negative                          12          1          -    Covered              
+#         bin Input_Highest_positive                          8          1          -    Covered              
+#         bin Input_all_zeros                                11          1          -    Covered              
+#         bin Input_neg                                      52          1          -    Covered              
+#         bin Input_pos                                      58          1          -    Covered              
+#         default bin random_data                             0                     -    ZERO                 
+# 
+# COVERGROUP COVERAGE:
+# ----------------------------------------------------------------------------------------------------------
+# Covergroup                                             Metric       Goal       Bins    Status               
+#                                                                                                          
+# ----------------------------------------------------------------------------------------------------------
+#  TYPE /pack1/my_subscirber/Design_signals              75.00%        100          -    Uncovered            
+#     covered/total bins:                                     6          7          -                      
+#     missing/total bins:                                     1          7          -                      
+#     % Hit:                                             85.71%        100          -                      
+#     Coverpoint reset_case                              50.00%        100          -    Uncovered            
+#         covered/total bins:                                 1          2          -                      
+#         missing/total bins:                                 1          2          -                      
+#         % Hit:                                         50.00%        100          -                      
+#         bin auto[0]                                         0          1          -    ZERO                 
+#         bin auto[1]                                       121          1          -    Covered              
+#     Coverpoint Input_case                             100.00%        100          -    Covered              
+#         covered/total bins:                                 5          5          -                      
+#         missing/total bins:                                 0          5          -                      
+#         % Hit:                                        100.00%        100          -                      
+#         bin Input_Lowest_negative                          12          1          -    Covered              
+#         bin Input_Highest_positive                          8          1          -    Covered              
+#         bin Input_all_zeros                                11          1          -    Covered              
+#         bin Input_neg                                      52          1          -    Covered              
+#         bin Input_pos                                      58          1          -    Covered              
+#         default bin random_data                             0                     -    ZERO                 
+# 
+# TOTAL COVERGROUP COVERAGE: 75.00%  COVERGROUP TYPES: 1
+# 
+# ASSERTION RESULTS:
+# --------------------------------------------------------------------
+# Name                 File(Line)                   Failure      Pass 
+#                                                   Count        Count
+# --------------------------------------------------------------------
+# /pack1/Reset_Sequence/body/immed__29
+#                      S:/GP_UVM/RLE/pack1/Sequence.sv(29)
+#                                                         0          1
+# /pack1/Test_Sequence/body/immed__58
+#                      S:/GP_UVM/RLE/pack1/Sequence.sv(58)
+#                                                         0          1
+# /pack1/Direct_Sequence/body/#ublk#7764449#111/immed__113
+#                      S:/GP_UVM/RLE/pack1/Sequence.sv(113)
+#                                                         0          1
+# /pack1/Direct_Sequence/body/#ublk#7764449#119/immed__121
+#                      S:/GP_UVM/RLE/pack1/Sequence.sv(121)
+#                                                         0          1
+# 
+# Total Coverage By Instance (filtered view): 87.50%
+# 
+# 
+# 
