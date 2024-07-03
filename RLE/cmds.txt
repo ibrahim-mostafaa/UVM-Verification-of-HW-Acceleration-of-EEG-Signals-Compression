@@ -1,7 +1,0 @@
-cd '../Modelsim_Project/' 
-
-vlog -f compile_top.txt 
-
-vsim work.TB_Top -voptargs=+acc=npr -l transcript_vsim +UVM_TESTNAME=my_test -do "run -all; coverage report -detail;" 
-
-
