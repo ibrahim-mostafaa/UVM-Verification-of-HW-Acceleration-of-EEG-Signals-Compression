@@ -15,7 +15,7 @@
     rand logic signed [7:0] input1, input2;
 
     // Non-Random Variables
-    logic signed [7:0] average, difference;
+    logic signed [8:0] average, difference;
     
    //  //Constraints
    //  constraint c1 { 
