@@ -64,14 +64,14 @@
     logic signed [11:0] integer_Z0_t, integer_Z1_t, integer_Z2_t, integer_Z3_t, integer_Z4_t, integer_Z5_t, integer_Z6_t, integer_Z7_t;
     real c1 = 0.9807852804, c2 = 0.92387953251, c3 = 0.8314696123, c4 = 0.70710678118, c5 = 0.55557023302, c6 = 0.38268343236, c7 = 0.19509032201;
 
-    real Input0 = item.input0 <<< 1; 
-    real Input1 = item.input1 <<< 1; 
-    real Input2 = item.input2 <<< 1; 
-    real Input3 = item.input3 <<< 1; 
-    real Input4 = item.input4 <<< 1; 
-    real Input5 = item.input5 <<< 1; 
-    real Input6 = item.input6 <<< 1; 
-    real Input7 = item.input7 <<< 1; 
+    logic signed [11:0] Input0 = item.input0 <<< 1; 
+    logic signed [11:0] Input1 = item.input1 <<< 1; 
+    logic signed [11:0] Input2 = item.input2 <<< 1; 
+    logic signed [11:0] Input3 = item.input3 <<< 1; 
+    logic signed [11:0] Input4 = item.input4 <<< 1; 
+    logic signed [11:0] Input5 = item.input5 <<< 1; 
+    logic signed [11:0] Input6 = item.input6 <<< 1; 
+    logic signed [11:0] Input7 = item.input7 <<< 1; 
     
     if(!item.rst_n) begin 
 
